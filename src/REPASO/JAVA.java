@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class JAVA {
 
-
+    public static double IVA=0.16;
     public static double total,subtotal;
     public static double UMBRAL_DESCUENTO=1000;
     public static double DESCUENTO=0.10;
@@ -13,7 +13,7 @@ public class JAVA {
         Scanner scanner = new Scanner(System.in);
 
          subtotal = pedirDouble(scanner, "Subtotal: ");
-         total =subtotal;
+         total =subtotal+(subtotal*IVA);
         Double CalcularDescuento=CalcularDescuento(total);
         System.out.printf("Total a pagar: %.2f%n", CalcularDescuento);
     }
